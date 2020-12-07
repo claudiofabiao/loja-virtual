@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="shop.controllers.CustomerAddressListController">
+   <children>
+      <ButtonBar>
+        <buttons>
+            <Button fx:id="removeBtn" mnemonicParsing="false" onAction="#remove" text="Remover" />
+            <Button fx:id="editBtn" mnemonicParsing="false" onAction="#openCustomerAddressEdit" text="Editar" />
+            <Button mnemonicParsing="false" onAction="#openCustomerAddressNew" text="Adicionar novo" />
+        </buttons>
+         <VBox.margin>
+            <Insets bottom="20.0" />
+         </VBox.margin>
+      </ButtonBar>
+      <TableView fx:id="table" prefHeight="400.0" prefWidth="800.0" tableMenuButtonVisible="true">
+        <columns>
+          <TableColumn fx:id="nameCol" prefWidth="75.0" text="Nome" />
+            <TableColumn fx:id="zipCodeCol" prefWidth="75.0" text="CEP" />
+            <TableColumn fx:id="streetCol" prefWidth="75.0" text="Logradouro" />
+            <TableColumn fx:id="numberCol" prefWidth="75.0" text="Número" />
+            <TableColumn fx:id="cityCol" prefWidth="75.0" text="Cidade" />
+            <TableColumn fx:id="stateCol" prefWidth="75.0" text="Estado" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+   <padding>
+      <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+   </padding>
+</VBox>
